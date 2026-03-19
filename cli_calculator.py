@@ -24,21 +24,25 @@ while True:
     num = input("Scegli un'operazione da compiere: ")
 
     if num == "5":
-        print("\n Grazie di avermi usato padrone arrivederci !")# mi permette di uscire dal while
-        break  
+        print("\nGrazie di avermi usato padrone arrivederci !")
+        break
 
     if num not in ("1", "2", "3", "4"):
         print("operazione scelta non valida, riseleziona oppure premi 5 per terminare!")
-        continue  # ci permette di tornare al menu senza chiedere i numeri
+        continue
 
     x = int(input("Inserisci il primo numero: "))
     y = int(input("Inserisci il secondo numero: "))
 
     if num == "1":
-        print("il risultato della somma è:", somma(x, y))
+        print(f"il risultato della somma è: {somma(x, y):.2f}")
     elif num == "2":
-        print("il risultato della sottrazione è:", sottrazione(x, y))
+        print(f"il risultato della sottrazione è: {sottrazione(x, y):.2f}")
     elif num == "3":
-        print("il risultato della divisione è:", divisione(x, y))
+        print(f"il risultato della divisione è: { divisione(x, y):.2f}")
     elif num == "4":
-        print("il risultato della moltiplicazione è:", moltiplicazione(x, y))
+        print(f"il risultato della moltiplicazione è: {moltiplicazione(x, y):.2f}")
+    continua = input("\nVuoi fare un altro calcolo? (s/n): ").strip().lower()
+    if continua == "n":
+        print("\nGrazie di avermi usato padrone arrivederci !")
+        break
