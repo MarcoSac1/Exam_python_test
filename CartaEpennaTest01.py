@@ -3,11 +3,11 @@ def media(l):
     return print("la media dei valori nella tua lista e': ", risultato)
 
 n = int(input("Quanti numeri vuoi inserire? "))
-l = [] # 1. Crea la lista vuota
+l = [] 
 
-for i in range(n): # 2. Cicla n volte
+for i in range(n): 
     numero = int(input(f"Inserisci il numero {i+1}: "))
-    l.append(numero) # 3. Aggiunge il numero alla lista
+    l.append(numero) 
 
 print("La tua lista è:", l)
 
